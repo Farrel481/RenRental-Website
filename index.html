@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="REN Rental — mockup pemesanan motor yang mudah dan terpercaya." />
+    <title>REN Rental — Sewa Motor, Lebih Mudah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="adjustments.css" />
+  </head>
+  <body>
+    <div class="announcement">Promo demo: Antar-jemput gratis untuk sewa minimum 3 hari <span>•</span> Reservasi mudah, tanpa ribet</div>
+    <header class="site-header">
+      <a class="brand" href="#beranda" aria-label="REN home"><span class="brand-mark">R</span><span>REN</span></a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a><a href="#armada">Armada</a>
+        <details class="nav-dropdown"><summary>Layanan <span>⌄</span></summary><div class="dropdown-panel"><a href="#cara-kerja">Sewa Harian</a><a href="#cara-kerja">Sewa Mingguan</a><a href="#cara-kerja">Antar & Jemput</a></div></details>
+        <a href="#cara-kerja">Cara Sewa</a>
+      </nav>
+      <button class="menu-button" aria-label="Buka menu">☰</button>
+      <a class="header-cta" href="#booking">Pesan Sekarang <span>→</span></a>
+    </header>
+
+    <main>
+      <section class="hero" id="beranda">
+        <div class="hero-copy"><p class="eyebrow">RENTAL MOTOR BANDUNG</p><h1>Jelajahi Kota dengan <em>Bebas.</em></h1><p class="lead">Pilih motormu, atur tanggalmu, nikmati perjalananmu.</p><p class="easy">That easy!</p><div class="hero-actions"><a href="#armada" class="primary-button">Lihat Armada <span>→</span></a><a href="#cara-kerja" class="text-button">Bagaimana caranya? <span>↓</span></a></div><div class="trust-row"><div><strong>4.9/5</strong><span>Penilaian pelanggan</span></div><div><strong>500+</strong><span>Perjalanan selesai</span></div><div><strong>24/7</strong><span>Bantuan tersedia</span></div></div></div>
+        <div class="hero-visual"><div class="hero-grid"></div><div class="motor-placeholder hero-motor"><span class="photo-label">UNIT PHOTO</span><div class="motor-silhouette">▰<i></i><b></b></div><p>Placeholder unit motor</p></div><div class="floating-card"><span class="status-dot"></span><div><small>Unit tersedia hari ini</small><strong>12 motor siap jalan</strong></div></div></div>
+      </section>
+
+      <section class="booking-strip" id="booking"><div><p class="eyebrow">CEK KETERSEDIAAN</p><h2>Mulai reservasi Anda</h2></div><form id="quickBooking"><label>Lokasi <select><option>Bandung</option><option>Bandung Utara</option><option>Bandung Selatan</option></select></label><label>Tanggal mulai <input type="date" id="quickStart" required /></label><label>Tanggal selesai <input type="date" id="quickEnd" required /></label><button class="dark-button" type="submit">Cari Motor <span>→</span></button></form></section>
+
+      <section class="fleet section" id="armada"><div class="section-heading"><div><p class="eyebrow">PILIHAN ARMADA</p><h2>Motor untuk setiap perjalanan.</h2></div><a href="#booking" class="text-button">Lihat semua unit <span>→</span></a></div><div class="fleet-grid" id="fleetGrid"></div></section>
+
+      <section class="steps section" id="cara-kerja"><div class="steps-intro"><p class="eyebrow">CARA KERJA</p><h2>Tiga langkah<br />pemesanan.</h2><p>Tanpa proses berbelit. Semua yang Anda butuhkan, dalam satu tempat.</p></div><ol><li><span>01</span><div><h3>Pilih unit</h3><p>Cari motor sesuai kebutuhan dan gaya perjalanan Anda.</p></div></li><li><span>02</span><div><h3>Tentukan tanggal</h3><p>Atur waktu sewa dan cek ketersediaan unit secara langsung.</p></div></li><li><span>03</span><div><h3>Konfirmasi & berangkat</h3><p>Tim kami akan mengonfirmasi pesanan Anda via WhatsApp.</p></div></li></ol></section>
+
+      <section class="booking-modal" id="bookingPanel" aria-hidden="true"><div class="booking-card"><button class="close-button" id="closeBooking" aria-label="Tutup">×</button><p class="eyebrow">RESERVASI UNIT</p><h2 id="bookingTitle">Pesan motor</h2><p id="bookingMeta" class="booking-meta"></p><form id="reservationForm"><div class="form-grid"><label>Nama lengkap<input required name="name" placeholder="Nama Anda" /></label><label>Nomor WhatsApp<input required name="phone" type="tel" placeholder="08xx xxxx xxxx" /></label><label>Tanggal mulai<input required name="start" type="date" /></label><label>Tanggal selesai<input required name="end" type="date" /></label></div><label>Catatan tambahan<textarea name="note" placeholder="Contoh: Antar ke hotel pukul 09.00"></textarea></label><button class="primary-button full" type="submit">Kirim permintaan booking <span>→</span></button><p class="form-note">Demo: permintaan ini akan masuk ke dashboard karyawan di browser ini.</p></form></div></section>
+      <section class="success-modal" id="successPanel" aria-hidden="true"><div><span class="success-icon">✓</span><h2>Permintaan terkirim.</h2><p>Tim REN Rental akan menghubungi Anda untuk konfirmasi melalui WhatsApp.</p><button class="dark-button" id="closeSuccess">Kembali ke beranda</button></div></section>
+    </main>
+    <footer><div class="footer-brand"><a class="brand" href="#beranda"><span class="brand-mark">R</span><span>REN<span class="brand-light">RENTAL</span></span></a><p>Rental motor yang dibuat agar perjalanan terasa lebih ringan.</p></div><div><p class="footer-title">NAVIGASI</p><a href="#armada">Armada</a><a href="#cara-kerja">Cara sewa</a><a href="#booking">Reservasi</a></div><div><p class="footer-title">HUBUNGI KAMI</p><a href="tel:+620000000000">+62 000 0000 0000</a><a href="mailto:halo@renrental.demo">halo@renrental.mock.up</a><p>Jakarta, Indonesia</p></div></footer>
+    <button class="staff-access" id="staffAccess" aria-label="Akses karyawan">●</button>
+    <section class="staff-gate" id="staffGate" aria-hidden="true"><div class="staff-login"><button class="close-button" id="closeStaff">×</button><p class="eyebrow">STAFF ONLY</p><h2>Ruang operasional.</h2><p>Masukkan PIN untuk membuka dashboard karyawan.</p><form id="staffLogin"><input id="staffPin" inputmode="numeric" type="password" maxlength="4" placeholder="• • • •" aria-label="PIN karyawan" required /><button class="dark-button" type="submit">Masuk <span>→</span></button><small>Demo PIN: 1234</small></form></div></section>
+    <section class="dashboard" id="dashboard" aria-hidden="true"><header><div><p class="eyebrow">STAFF DASHBOARD</p><h2>Selamat datang, Admin.</h2></div><button id="logout" class="text-button">Keluar →</button></header><div class="dashboard-stats"><div><span>Pesanan aktif</span><strong id="activeOrders">03</strong></div><div><span>Unit tersedia</span><strong id="availableUnits">12</strong></div><div><span>Perlu konfirmasi</span><strong id="pendingOrders">02</strong></div></div><div class="orders-head"><div><h3>Pesanan terbaru</h3><p>Kelola status reservasi dari sini.</p></div><button class="secondary-button" id="refreshOrders">↻ Perbarui</button></div><div class="orders-table-wrap"><table><thead><tr><th>Pelanggan</th><th>Unit</th><th>Tanggal sewa</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="ordersBody"></tbody></table></div></section>
+    <script src="app.js"></script>
+  </body>
+</html>
